@@ -1,0 +1,21 @@
+@import "_vars";
+@import "_mixin";
+@import "_pre-settings";
+
+@import "layouts/container";
+@import "layouts/header";
+@import "layouts/footer";
+
+@import "ui/typography";
+@import "ui/burger";
+@import "ui/button";
+@import "ui/form";
+@import "ui/menu";
+
+@import "components/promo";
+@import "components/about";
+@import "components/reviews";
+@import "components/form";
+
+@import "pages/ui-kit";
+

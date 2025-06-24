@@ -1,0 +1,37 @@
+{
+  "name": "new-gulp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.29.3",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssbeautify": "^3.0.1",
+    "gulp-flatten": "^0.4.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.1",
+    "gulp-replace": "^1.1.4",
+    "gulp-sass": "^5.1.0",
+    "gulp-strip-css-comments": "^2.0.0",
+    "gulp-svg-sprite": "^2.0.3",
+    "gulp-uglify-es": "^3.0.0",
+    "panini": "^1.7.2",
+    "postcss": "^8.4.24",
+    "postcss-preset-env": "^8.5.1",
+    "sass": "^1.63.6"
+  },
+  "browserslist": [
+    "last 1 version",
+    "> 1%",
+    "IE 10"
+  ]
+}

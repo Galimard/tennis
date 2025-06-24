@@ -1,0 +1,44 @@
+.row {
+  --bs-gutter-x: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 360px;
+  padding-left: 24px;
+  padding-right: 24px;
+  margin: 0 auto;
+}
+
+@media all and (min-width: $screenSm) {
+  .container {
+    max-width: 700px;
+  }
+}
+
+@media all and (min-width: $screenMd) {
+  .container {
+    max-width: 912px;
+  }
+}
+
+@media all and (min-width: $screenLg) {
+  .container {
+    max-width: 984px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media all and (min-width: $screenXl) {
+  .container {
+    max-width: 1200px;
+    
+  }
+}
+
+@media all and (min-width: $screenXxl) {
+  .container {
+    max-width: 1440px;
+  }
+}

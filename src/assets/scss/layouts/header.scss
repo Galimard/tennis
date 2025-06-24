@@ -1,0 +1,147 @@
+.header {
+  position: sticky;
+  top: 0;
+  background-color: $cGreyBg;
+  z-index: 100;
+  box-shadow: 0px 3px 7px -2px rgba(34, 60, 80, 0.2);
+
+  &__inner {
+    @include flexSpace;
+    padding: 9px 0;
+  }
+
+  &__logo {
+    width: 45px;
+    height: 45px;
+    flex-shrink: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__burger {
+    display: none;
+    width: 24px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+        
+    .burger-line {
+      position: absolute;
+      height: 3px;
+      width: 100%;
+      background: #000;
+      border-radius: 3px;
+      transition: all 0.3s ease;
+    }
+    
+    .burger-line:nth-child(1) {
+      width: 70%;
+      top: 0;
+    }
+    
+    .burger-line:nth-child(2) {
+      width: 85%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    
+    .burger-line:nth-child(3) {
+      bottom: 0;
+    }
+  }
+
+  &-search {
+    flex-shrink: 0;
+    position: relative;
+    width: 34px;
+    height: 26px;
+    margin-left: auto;
+    margin-right: 20px;
+
+    &__block {
+      position: absolute;
+      width: 200px;
+      height: 26px;
+      right: 0;
+    }
+
+    &__wrap {
+      position: relative;
+      height: 100%;
+    }
+
+    &__input {
+      @include clear-input;
+
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      width: 34px;
+      height: 26px;
+      padding: 7px 11px;
+      background: $cBlack;
+      border-radius: 20px;
+      transition: width 0.3s ease;
+      color: $cWhite;
+      font-size: 14px;
+
+      &:focus,
+      &.expanded {
+        width: 200px;
+        padding-right: 28px;
+      }
+
+      &::-webkit-search-cancel-button {
+        filter: grayscale(1);
+      }
+ 
+    }
+
+    &__icon.button {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      width: 13px;
+      height: 13px;
+      padding: 0;
+
+      svg {
+        width: 13px;
+        height: 13px;
+      }
+    }
+  }
+
+  @media all and (min-width: $screenLg) {
+    &-search {
+      margin: 0;
+    }
+
+    &__burger {
+      display: none !important;
+    }
+  }
+
+  @media all and (min-width: $screenXl) {   
+    &__logo {
+      width: 67px;
+      height: 65px;
+    }
+  }
+
+  @media all and (max-width: $screenLgMax) {
+    &__search {
+      margin-left: auto;
+      margin-right: $space-xs;
+    }
+
+    &__burger {
+      display: flex;
+    }
+  }
+}

@@ -1,0 +1,87 @@
+.typography-h1 {
+  font-family: $fontAkony;
+  font-size: 30px;
+  line-height: 102%;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-align: center;
+  color: $cRed;  
+}
+
+.typography-h2 {
+  font-family: $fontAkony;
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: 700;
+  letter-spacing: -1px;
+  text-align: center;
+}
+
+.typography-h3 {
+  font-family: $fontAkony;
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: 700;
+  letter-spacing: -1px;
+  text-align: center;
+}
+
+.typography-h4 {
+  font-family: $fontAkony;
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: 700;
+  letter-spacing: -1px;
+  text-align: center;
+}
+
+.link {
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+@media all and (min-width: $screenMd) {
+  .typography-h1 {
+    font-size: 50px;
+    line-height: 102%;
+    -webkit-text-stroke: 2px $cRed;
+    text-stroke: 2px $cRed;
+  } 
+
+  .typography-h2 {
+    font-size: 42px;
+  }
+
+  .typography-h3 {
+    font-size: 38px;
+    text-align: left;
+  }
+
+  .typography-h4 {
+    font-size: 32px;
+  }
+}
+
+@media all and (min-width: $screenXxl) {
+  .typography-h1 {
+    font-size: 75px;
+    line-height: 102%;
+    -webkit-text-stroke: 4px $cRed;
+    text-stroke: 4px $cRed;
+  }
+
+  .typography-h2 {
+    font-size: 64px;
+  }
+
+   .typography-h3 {
+    font-size: 48px;
+  }
+
+  .typography-h4 {
+    font-size: 38px;
+  }
+}

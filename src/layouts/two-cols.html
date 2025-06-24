@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    {{> head }}
+  </head>
+  <body>
+      <div class="two-cols">
+        {{> header-two-cols }}
+        
+        <main class="main">
+          <div class="container">
+            <div class="two-cols__wrap">
+              <div class="col-menu">
+                {{> menu }}
+              </div>
+              
+              <div class="col-container">
+                {{> body }}
+              </div>
+            </div>
+          </div>                  
+        </main>
+      </div> 
+    
+    {{> scripts }}
+  </body>
+</html>

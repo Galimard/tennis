@@ -1,0 +1,61 @@
+$fontName: "Inter";
+$fontNameAkony: "Akony";
+$font: $fontName, Helvetica, Arial, sans-serif, -apple-system;
+$fontAkony: $fontNameAkony, Helvetica, Arial, sans-serif, -apple-system;
+
+$rem: 1px;
+
+$cBlack: #000000;
+$cRed: #A62430;
+$cWhite: #ffffff;
+$cGrey: rgba(255, 255, 255, 0.6);
+$cGreyBg: #FAFAFA;
+
+$space: 1px;
+$space-xxs: 8px;
+$space-xs: 16px;
+$space-small: 24px;
+$space-medium: 32px;
+$space-large: 40px;
+$space-xl: 60px;
+$space-xxl: 120px;
+
+$fRegular: 400;
+$fBold: 700;
+
+$lineHeight: 1.4;
+$lineHeightTitle: 1.1;
+
+$borderRadius: 40px;
+
+$shadow: 0 4px 32px fade($cBlack, 10);
+$cardShadow: 0px 0px 25px rgba(220, 220, 245, 0.7);
+$cardHoverShadow: 0 0 16px fade($cBlack, 20);
+
+$contentMaxWidth: 1290 * $rem;
+$contentWideMaxWidth: 1920 * $rem;
+
+$screenXxs: 375px; //375 //min-width
+$screenXs: 576px; //576
+$screenSm: 768px; //768
+$screenMd: 960px; //992
+$screenLg: 1024px; //1200
+$screenXl: 1280px; //1440
+$screenXxl: 1440px; //1920
+
+$screenXxsMax: ($screenXxs - 1); //max-width
+$screenXsMax: ($screenXs - 1);
+$screenSmMax: ($screenSm - 1);
+$screenMdMax: ($screenMd - 1);
+$screenLgMax: ($screenLg - 1);
+$screenXlMax: ($screenXl - 1);
+$screenXxlMax: ($screenXxl - 1);
+
+//ширина контейнера
+$c-xxl: 1440px; //1400
+$c-xl: 1240px; //1400
+$c-l: 1024px; //1200
+$c-md: 768px; //992
+$c-sm: 720px; //768
+$c-xs: 540px; //576
+$c-xxs: 375px; //375

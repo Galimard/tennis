@@ -1,0 +1,747 @@
+---
+layout: default
+title: Ui-kit
+---
+<div class="ui-kit">
+  <div class="container">
+
+    <div class="ui-kit__block">
+      <h1 class="typography-h1">Ui-kit</h1>
+    </div>
+  
+    <!-- шрифты -->
+    <div class="ui-kit__block">
+      <div class="ui-kit__row">
+        <h2 class="typography-h2">Типографика</h2>
+      </div>
+    
+      <div class="ui-kit__row">
+        <h2 class="typography-h1">Заголовок h1</h2>
+        <h2 class="typography-h2">Заголовок h2</h2>
+        <h3 class="typography-h3">Заголовок h3</h3>
+        <h4 class="typography-h4">Заголовок h4</h4>
+        <h4 class="typography-h4-bold">Заголовок h4 bold</h4>
+        <p class="typography-body">typography-body</p>
+      </div>
+    </div>
+    <hr>
+
+    <!-- кнопки -->
+    <div class="ui-kit__block">
+      <div class="ui-kit__row">
+        <h2 class="typography-h2">Кнопки</h2>
+      </div>
+
+      <button class="button button-primary">Button primary</button>
+      <button class="button button-secondary">Button secondary</button>
+      <button class="button button-tertiary">Button tertiary</button>    
+    </div>
+    <hr>
+
+    <!-- хлебные крошки -->
+    <div class="ui-kit__block">
+      <div class="ui-kit__row">
+        <h2 class="typography-h2">хлебные крошки</h2>
+      </div>
+
+      <div class="breadcrumbs__wrap">
+        <div class="container">
+          <ul class="breadcrumbs">
+            <li class="breadcrumbs__link"><a href="#">Главная</a></li>
+            <li class="breadcrumbs__link">Активы</li>
+          </ul>
+        </div>
+      </div>  
+    </div> 
+    <hr>   
+
+    <!-- меню -->
+    <div class="ui-kit__block">
+      <div class="ui-kit__row">
+        <h2 class="typography-h2">Меню</h2>
+      </div>
+
+      <nav class="menu js-menu">
+        <ul>
+          <li class="menu__item typography-uppercase">
+            <a href="/">О КОМПАНИИ</a>
+          </li>
+          <li class="menu__item typography-uppercase active">
+            <a href="/public/lots/my-lots.html">НОВОСТИ</a>
+          </li>
+          <li class="menu__item typography-uppercase">
+            <a href="/public/instructions.html">АКТИВЫ</a>
+          </li>
+          <li class="menu__item typography-uppercase">
+            <a href="/public/profile.html">ТАЛАНТЫ</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <hr>  
+
+    <!-- форма -->
+    <div class="ui-kit__block">
+      <div class="ui-kit__row">
+        <h2 class="typography-h2">Элементы формы</h2>
+      </div>
+
+      <form action="#" class="form">
+        <!-- <div class="form-item form-item--search mb-40">
+          <button type="button" class="button-image">
+              <svg>
+                  <use xlink:href="/assets/sprites/symbol/svg/sprite.symbol.svg#search"></use>
+              </svg>
+          </button>
+          
+          <input type="search" placeholder="Поиск" class="form-item__input">
+        </div> -->
+
+        <div class="row form-row">
+          <div class="col-6">
+            <div class="field">
+              <label class="form-item">
+                <input id="name" class="form-item__input js-input" type='text' name="name" required
+                  data-validate-text-invalid='Пожалуйста, введите ваше имя' />
+                <span class="form-item__name">Имя <span>*</span>
+                </span>
+              </label>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="field">
+              <label class="form-item">
+                <input id="surname" class="form-item__input js-input" type='text' name="surname" required
+                  data-validate-text-invalid='Пожалуйста, введите вашу фамилию' />
+                <span class="form-item__name">Фамилия <span>*</span>
+                </span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="row form-row">
+          <div class="col-12 col-md-6 form-mb-sm">
+            <div class="field">
+              <label class="form-item">
+                <input id="phone" class="form-item__input js-input" type='tel' name="phone" required
+                  data-validate-text-invalid='Пожалуйста, введите ваш телефон' />
+                <span class="form-item__name">Контактный номер телефона <span>*</span>
+                </span>
+              </label>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6">
+            <div class="field">
+              <label class="form-item">
+                <input id="email" class="form-item__input js-input" type='text' name="email" required
+                  data-validate-text-invalid='Пожалуйста, введите вашу почту' pattern="email" />
+                <span class="form-item__name">Адрес электронной почты <span>*</span>
+                </span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="row form-row">
+          <div class="col-12 col-md-6 form-mb-sm">
+            <div class="field">
+              <div id="select-object"></div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6">
+            <div class="field">
+              <label class="form-item">
+                <input id="price" class="form-item__input js-input" type='number' name="price" required
+                  data-validate-text-invalid='Пожалуйста, введите цену' />
+                <span class="form-item__name">Цена, ₽ <span>*</span></span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="row form-row">
+          <div class="col-12">
+              <div class="field">
+                  <label class="form-item">
+                      <textarea class="form-item__textarea js-input" type='text' name="description"></textarea>
+                      <span class="form-item__name">Описание</span>
+                  </label>
+              </div>
+          </div>
+        </div>
+
+        <div class="row form-row">
+          <div class="col-12">
+            <div class="form-row__wrap">
+              <div class="field">
+                <label class="form-item form-item--file">
+                    <input class="form-item__input--file js-input-file" type='file' name="file" required    data-validate-text-invalid = 'Пожалуйста, прикрепите файл с резюме*'
+                    accept=".pdf" />
+                    <span class="form-item__name--file">Прикрепить файл
+                      <svg>
+                        <use xlink:href="/assets/sprites/symbol/svg/sprite.symbol.svg#paperclip"></use>
+                      </svg>
+                    </span>
+                </label>
+              </div> 
+              
+              <button class="button button-primary form-button-send" type="submit">Отправить</button> 
+            </div>
+          </div>
+        </div>
+
+        <div class="row form-row">
+          <p class="typography-grey form__policy">Нажимая на кнопку «Отправить», вы даёте согласие на обработку <a href="#" target="_blank">персональных данных</a></p>
+        </div>
+
+        <!-- <div class="row mb-40">
+          <div class="col-6">
+            <label class="form-item form-item--checkbox">
+              <input id="password" class="form-item__input--checkbox js-input" type='checkbox' name="password"/>
+              <span class="form-item__checkbox"></span>
+              <span class="form-item__name--checkbox">запомнить меня</span>
+            </label>
+          </div>
+
+          <div class="col-6 text-end">
+            <a href="/public/auth/forgot.html" class="link">Забыли пароль?</a>
+          </div>
+        </div> -->
+
+      </form>
+    </div>
+    <hr>  
+
+    <!-- Слайдер -->   
+    <div class="ui-kit__block">
+      <div class="ui-kit__row">
+        <h2 class="typography-h2">Слайдер новости</h2>
+      </div>
+      
+      <div class="slider-ui__wrap">
+        <div class="slider-ui__header">
+          <h3 class="typography-h1 slider-ui__title title-underline"><span>Новости</span></h3>
+
+          <div class="js-slider-arrows-news slider-ui__arrows"></div>
+          <a href="#" class="typography-grey slider-ui__hide-link">Архив новостей</a>
+        </div>
+
+        <div class="slider-ui slider-ui-news js-slider-news">
+
+          <div class="slider-ui__item">
+            <div class="slider-ui__img">
+              <img src="../assets/images/slider/img5.jpg" alt="">
+            </div>
+            <h4 class="slider-ui__title typography-h4-bold truncate truncate-2">ДИНАМИКА СТРОИТЕЛЬСТВА MANTERA SEAVIEW RESIDENCE</h4>
+            <p class="typography-body truncate truncate-4">Общая готовность резиденций составляет 80%. Стены и перегородки смонтированы на 89%. Завершен монтаж кровли. Готовность внутренней отделки - 52,6%, инженерных систем - 86%.Пятизвёздочный отель готов на 71,6%. Продолжается строительство конгресс-центра. Готовность здания – 66,8%. Бассейны реализованы на 40%. Продолжается благоустройство территории комплекса.</p>
+            <p class="slider-ui__date">10 марта</p>
+          </div>
+
+          <div class="slider-ui__item">
+            <div class="slider-ui__img">
+              <img src="../assets/images/slider/img6.jpg" alt="">
+            </div>
+            <h4 class="slider-ui__title typography-h4-bold truncate truncate-2">Lorem ipsum dolor sit amet consectetur. Viverra nisl sodales risus nibh gravida nisi et. Massa at aliquam at blandit. Neque.</h4>
+            <p class="typography-body truncate truncate-4">Общая готовность резиденций составляет 80%. Стены и перегородки смонтированы на 89%. Завершен монтаж кровли. Готовность внутренней отделки - 52,6%, инженерных систем - 86%.Пятизвёздочный отель готов на 71,6%. Продолжается строительство конгресс-центра. Готовность здания – 66,8%. Бассейны реализованы на 40%. Продолжается благоустройство территории комплекса.</p>
+            <p class="slider-ui__date">10 марта</p>
+          </div>
+
+          <div class="slider-ui__item">
+            <div class="slider-ui__img">
+              <img src="../assets/images/slider/img7.jpg" alt="">
+            </div>
+            <h4 class="slider-ui__title typography-h4-bold truncate truncate-2">Lorem ipsum dolor sit amet consectetur. Viverra nisl sodales risus nibh gravida nisi et. Massa at aliquam at blandit. Neque.</h4>
+            <p class="typography-body truncate truncate-4">Общая готовность резиденций составляет 80%. Стены и перегородки смонтированы на 89%. Завершен монтаж кровли. Готовность внутренней отделки - 52,6%, инженерных систем - 86%.Пятизвёздочный отель готов на 71,6%. Продолжается строительство конгресс-центра. Готовность здания – 66,8%. Бассейны реализованы на 40%. Продолжается благоустройство территории комплекса.</p>
+            <p class="slider-ui__date">10 марта</p>
+          </div>
+
+          <div class="slider-ui__item">
+            <div class="slider-ui__img">
+              <img src="../assets/images/slider/img5.jpg" alt="">
+            </div>
+            <h4 class="slider-ui__title typography-h4-bold truncate truncate-2">ДИНАМИКА СТРОИТЕЛЬСТВА MANTERA SEAVIEW RESIDENCE</h4>
+            <p class="typography-body truncate truncate-4">Общая готовность резиденций составляет 80%. Стены и перегородки смонтированы на 89%. Завершен монтаж кровли. Готовность внутренней отделки - 52,6%, инженерных систем - 86%.Пятизвёздочный отель готов на 71,6%. Продолжается строительство конгресс-центра. Готовность здания – 66,8%. Бассейны реализованы на 40%. Продолжается благоустройство территории комплекса.</p>
+            <p class="slider-ui__date">10 марта</p>
+          </div>
+
+        </div>
+      </div>
+      
+    </div>
+    <hr> 
+
+    <!-- Показать ещё -->
+    <!-- <div class="ui-kit__block">
+      <div class="ui-kit__row">
+        <h2 class="typography-h2">Показать ещё</h2>
+      </div>
+
+      <div class="js-list">
+        <div class="js-list-item">1</div>
+        <div class="js-list-item">2</div>
+        <div class="js-list-item next">3</div>
+        <div class="js-list-item">4</div>
+        <div class="js-list-item">5</div>
+        <div class="js-list-item">6</div>
+        <div class="js-list-item">7</div>
+
+        <button class="button button-grey button-icon-right js-show-more">
+          Показать ещё
+          <svg>
+            <use xlink:href="/assets/sprites/symbol/svg/sprite.symbol.svg#more"></use>
+          </svg>
+        </button>
+      </div>
+    </div> -->
+
+  </div>
+
+  <!-- Слайдеры -->
+  <div class="ui-kit__block">
+    <div class="ui-kit__row">
+      <div class="container">
+        <h2 class="typography-h2">Слайдер</h2>
+      </div>      
+    </div>
+    
+    <div class="slider-ui__wrap">
+      <div class="container">
+        <div class="slider-ui__header">
+          <h3 class="typography-h3-big slider-ui__title title-underline"><span>Галерея объекта</span></h3>
+  
+          <div class="js-slider-arrows slider-ui__arrows"></div>
+        </div>
+      </div>      
+
+      <div class="slider-ui js-slider">
+        <div class="slider-ui__item"><img src="../assets/images/slider/slide1.jpg" alt=""></div>
+        <div class="slider-ui__item"><img src="../assets/images/slider/slide1.jpg" alt=""></div>
+        <div class="slider-ui__item"><img src="../assets/images/slider/slide1.jpg" alt=""></div>
+      </div>
+    </div>
+    
+  </div>
+  <hr>  
+
+  <div class="ui-kit__block">
+    <div class="ui-kit__row">
+      <div class="container">
+        <h2 class="typography-h2">Слайдер проекта</h2>
+      </div>      
+    </div>
+    
+    <div class="slider-ui__wrap">      
+      <div class="container">
+        <div class="slider-ui__header">
+          <h3 class="typography-h3 slider-ui__title title-underline"><span>Активы</span></h3>
+          <div class="js-slider-arrows-project slider-ui__arrows"></div>
+        </div>
+      </div>
+
+      <div class="slider-ui slider-ui-project js-slider-project">
+
+        <a href="#" class="slider-ui__item">
+          <span class="slider-ui__img">
+            <img src="../assets/images/slider/project.jpg" alt="">
+          </span>
+          <span class="slider-ui-project__title typography-h3-big">Mantera seaview residence</span>
+        </a>
+
+        <a href="#" class="slider-ui__item">
+          <span class="slider-ui__img">
+            <img src="../assets/images/slider/project2.jpg" alt="">
+          </span>
+          <span class="slider-ui-project__title typography-h3-big">Комплекс на цимлянской</span>
+        </a>
+
+        <a href="#" class="slider-ui__item">
+          <span class="slider-ui__img">
+            <img src="../assets/images/slider/project.jpg" alt="">
+          </span>
+          <span class="slider-ui-project__title typography-h3-big">Mantera seaview residence</span>
+        </a>
+
+        <a href="#" class="slider-ui__item">
+          <span class="slider-ui__img">
+            <img src="../assets/images/slider/project2.jpg" alt="">
+          </span>
+          <span class="slider-ui-project__title typography-h3-big">Комплекс на цимлянской</span>
+        </a>
+
+      </div>
+    </div>
+    
+  </div> 
+  <hr> 
+
+  <div class="ui-kit__block">
+    <div class="ui-kit__row">
+      <div class="container">
+        <h2 class="typography-h2">Слайдер 4-й</h2>
+      </div>      
+    </div>
+    
+    <div class="slider-ui__wrap">
+      <div class="container">
+        <div class="slider-ui__header">
+          <h3 class="typography-h3-big slider-ui__title title-underline"><span>Услуги</span></h3>
+  
+          <div class="js-slider-arrows-four slider-ui__arrows"></div>
+        </div>
+      </div>      
+
+      <div class="slider-ui slider-ui-four js-slider-four">
+        <div class="slider-ui__item">
+          <div class="slider-ui__img">
+            <img src="../assets/images/slider/img1.jpg" alt="">
+          </div>
+          <h4 class="slider-ui__title typography-h4-bold truncate truncate-2">Рестораны</h4>
+          <p class="typography-body truncate truncate-4">Lorem ipsum dolor sit amet consectetur. Porttitor egestas ac vitae netus aliquam diam ac amet. Mi enim at pharetra tempus. Tortor risus pellentesque elementum cras.</p>
+        </div>
+
+        <div class="slider-ui__item">            
+          <div class="slider-ui__img">
+            <img src="../assets/images/slider/img2.jpg" alt="">
+          </div>
+          <h4 class="slider-ui__title typography-h4-bold truncate truncate-2">ТРЦ и Казино</h4>
+          <p class="typography-body truncate truncate-4">Lorem ipsum dolor sit amet consectetur. Porttitor egestas ac vitae netus aliquam diam ac amet. Mi enim at pharetra tempus. Tortor risus pellentesque elementum cras.</p>
+        </div>
+
+        <div class="slider-ui__item">
+          <div class="slider-ui__img">
+            <img src="../assets/images/slider/img3.jpg" alt="">
+          </div>
+          <h4 class="slider-ui__title typography-h4-bold truncate truncate-2">Парки аттракционов</h4>
+          <p class="typography-body truncate truncate-4">Lorem ipsum dolor sit amet consectetur. Porttitor egestas ac vitae netus aliquam diam ac amet. Mi enim at pharetra tempus. Tortor risus pellentesque elementum cras.</p>
+        </div>
+
+        <div class="slider-ui__item">            
+          <div class="slider-ui__img">
+            <img src="../assets/images/slider/img4.jpg" alt="">
+          </div>
+          <h4 class="slider-ui__title typography-h4-bold truncate truncate-2">Аквапарк</h4>
+          <p class="typography-body truncate truncate-4">Lorem ipsum dolor sit amet consectetur. Porttitor egestas ac vitae netus aliquam diam ac amet. Mi enim at pharetra tempus. Tortor risus pellentesque elementum cras.</p>
+        </div>
+
+        <div class="slider-ui__item">            
+          <div class="slider-ui__img">
+            <img src="../assets/images/slider/img1.jpg" alt="">
+          </div>
+          <h4 class="slider-ui__title typography-h4-bold truncate truncate-2">Рестораны</h4>
+          <p class="typography-body truncate truncate-4">Lorem ipsum dolor sit amet consectetur. Porttitor egestas ac vitae netus aliquam diam ac amet. Mi enim at pharetra tempus. Tortor risus pellentesque elementum cras.</p>
+        </div>
+
+        <div class="slider-ui__item">            
+          <div class="slider-ui__img">
+            <img src="../assets/images/slider/img2.jpg" alt="">
+          </div>
+          <h4 class="slider-ui__title typography-h4-bold truncate truncate-2">ТРЦ и Казино</h4>
+          <p class="typography-body truncate truncate-4">Lorem ipsum dolor sit amet consectetur. Porttitor egestas ac vitae netus aliquam diam ac amet. Mi enim at pharetra tempus. Tortor risus pellentesque elementum cras.</p>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  <hr>  
+
+  <div class="container">
+    <!-- модальное окно -->
+    <div class="ui-kit__block">
+      <div class="ui-kit__row">
+        <h2 class="typography-h2">модальное окно</h2>
+      </div>
+
+      <button class="button button-primary" data-modal="modal-form">Открыть форму</button>
+
+      <div id="modal-form" class="modal-custom js-modal">
+        <div class="modal-custom__body">
+            <button class="modal-custom__close js-modal-close" type="button">
+              <svg data-close="close">
+                <use xlink:href="/assets/sprites/symbol/svg/sprite.symbol.svg#close" data-close="close"></use>
+              </svg>
+            </button>
+            <div class="modal-custom__content form-content">    
+              
+              <h3 class="modal-custom__title typography-h3">Хотите работать в Mantera?</h3>
+              <h4 class="modal-custom__subtitle typography-h4">Заполните короткую заявку и мы свяжемся с вами</h4>
+
+
+              <form action="#" class="form">
+        
+                <div class="row form-row">
+                  <div class="col-6">
+                    <div class="field">
+                      <label class="form-item">
+                        <input id="name" class="form-item__input js-input" type='text' name="name" required
+                          data-validate-text-invalid='Пожалуйста, введите ваше имя' />
+                        <span class="form-item__name">Имя <span>*</span>
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+        
+                  <div class="col-6">
+                    <div class="field">
+                      <label class="form-item">
+                        <input id="surname" class="form-item__input js-input" type='text' name="surname" required
+                          data-validate-text-invalid='Пожалуйста, введите вашу фамилию' />
+                        <span class="form-item__name">Фамилия <span>*</span>
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+        
+                <div class="row form-row">
+                  <div class="col-12 col-md-6 form-mb-sm">
+                    <div class="field">
+                      <label class="form-item">
+                        <input id="phone" class="form-item__input js-input" type='tel' name="phone" required
+                          data-validate-text-invalid='Пожалуйста, введите ваш телефон' />
+                        <span class="form-item__name">Контактный номер телефона <span>*</span>
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+        
+                  <div class="col-12 col-md-6">
+                    <div class="field">
+                      <label class="form-item">
+                        <input id="email" class="form-item__input js-input" type='text' name="email" required
+                          data-validate-text-invalid='Пожалуйста, введите вашу почту' pattern="email" />
+                        <span class="form-item__name">Адрес электронной почты <span>*</span>
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+        
+                <div class="row form-row">
+                  <div class="col-12 col-md-6 form-mb-sm">
+                    <div class="field">
+                      <div id="select-job"></div>
+                    </div>
+                  </div>
+        
+                  <div class="col-12 col-md-6">
+                    <div class="field">
+                      <label class="form-item">
+                        <input id="job" class="form-item__input js-input" type='text' name="job" required
+                          data-validate-text-invalid='Пожалуйста, введите должность' />
+                        <span class="form-item__name">Желаемая должность <span>*</span></span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+        
+                <div class="row form-row">
+                  <div class="col-12">
+                      <div class="field">
+                          <label class="form-item">
+                              <textarea class="form-item__textarea js-input" type='text' name="description"></textarea>
+                              <span class="form-item__name">Комментарий</span>
+                          </label>
+                      </div>
+                  </div>
+                </div>
+        
+                <div class="row form-row">
+                  <div class="col-12">
+                    <div class="form-row__wrap">
+                      <div class="field">
+                        <label class="form-item form-item--file">
+                            <input class="form-item__input--file js-input-file" type='file' name="file" required    data-validate-text-invalid = 'Пожалуйста, прикрепите файл с резюме*'
+                            accept=".pdf" />
+                            <span class="form-item__name--file">Прикрепить файл
+                              <svg>
+                                <use xlink:href="/assets/sprites/symbol/svg/sprite.symbol.svg#paperclip"></use>
+                              </svg>
+                            </span>
+                        </label>
+                      </div> 
+                      
+                      <button class="button button-primary form-button-send" type="submit">Отправить</button> 
+                    </div>
+                  </div>
+                </div>
+        
+                <div class="row form-row">
+                  <p class="typography-grey form__policy">Нажимая на кнопку «Отправить», вы даёте согласие на обработку <a href="#" target="_blank">персональных данных</a></p>
+                </div>
+        
+              </form>
+            </div>                  
+        </div>
+      </div>
+
+    </div>
+    <hr>
+
+    <!-- Тизеры -->
+    <div class="ui-kit__block">
+      <div class="ui-kit__row">
+        <h2 class="typography-h2">Карточка с тизерами</h2>
+      </div>
+
+      <div class="tizers">
+
+        <div class="tizers-card">
+          <div class="tizers-card-img__wrap">
+            <div class="tizers-card-img">
+              <img src="../assets/images/girl.png" alt="">
+            </div>
+            <h3 class="tizers-card-info__title--mob typography-h3 title-underline"><span>Ключевые направления деятельности mantera</span></h3>
+          </div>
+          <div class="tizers-card-info">
+            <h3 class="tizers-card-info__title typography-h3 title-underline"><span>Ключевые направления деятельности mantera</span></h3>
+            <p class="tizers-card-info__text typography-h4">— развитие туристических дестинаций, девелопмент, управление отелями в партнёрстве с глобальными сетевыми брендами, разработка и внедрение новых стандартов гостеприимства</p>
+
+            <div class="tizers-card-info-descr">
+              <p class="tizers-card-info-descr__item">Развивая лучшие мировые практики в сфере гостеприимства, MANTERA разработала экспертную систему управления, которая позволяет масштабировать бизнес с неизменно высоким качеством сервиса.</p>
+              <p class="tizers-card-info-descr__item">Каждый проект экосистемы MANTERA — это синергия яркого эмоционального опыта наших гостей, передовых технологий сервиса, высокой эстетики пространств, экологичности и заботы о здоровье.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="tizers-block">
+          <div class="tizers-block-item">
+            <p class="typography-h2">100 млрд ₽</p>
+            <p class="typography-body">планируемые инвестиции</p>
+          </div>
+
+          <div class="tizers-block-item">
+            <p class="typography-h2">6000</p>
+            <p class="typography-body">сотрудников</p>
+          </div>
+
+          <div class="tizers-block-item">
+            <p class="typography-h2">20 млрд ₽</p>
+            <p class="typography-body">оборот</p>
+          </div>
+
+          <div class="tizers-block-item">
+            <p class="typography-h2">3 000 000</p>
+            <p class="typography-body">посещаемость в год</p>
+          </div>
+
+          <div class="tizers-block-item">
+            <p class="typography-h2">6000 номеров</p>
+            <p class="typography-body">номерной фонд</p>
+          </div>
+        </div>
+        
+      </div>
+
+    </div>
+    <hr>
+
+    <!-- Преимущества -->
+    <div class="ui-kit__block">
+      <div class="ui-kit__row">
+        <h2 class="typography-h2">Преимущества</h2>
+      </div>
+
+      <div class="advantages">
+        <div class="advantages-item">
+          <p class="typography-h2">100 млрд ₽</p>
+          <p class="typography-body">планируемые инвестиции</p>
+        </div>
+
+        <div class="advantages-item">
+          <p class="typography-h2">6000</p>
+          <p class="typography-body">сотрудников</p>
+        </div>
+
+        <div class="advantages-item">
+          <p class="typography-h2">20 млрд ₽</p>
+          <p class="typography-body">оборот</p>
+        </div>
+
+        <div class="advantages-item">
+          <p class="typography-h2">3 000 000</p>
+          <p class="typography-body">посещаемость в год</p>
+        </div>
+
+        <div class="advantages-item">
+          <p class="typography-h2">6000 номеров</p>
+          <p class="typography-body">номерной фонд</p>
+        </div>
+      </div>
+
+      <br>
+
+      <div class="advantages advantages--top">
+        <div class="advantages-item">
+          <p class="typography-h2">100 млрд ₽</p>
+          <p class="typography-body">планируемые инвестиции</p>
+        </div>
+
+        <div class="advantages-item">
+          <p class="typography-h2">6000</p>
+          <p class="typography-body">сотрудников</p>
+        </div>
+
+        <div class="advantages-item">
+          <p class="typography-h2">20 млрд ₽</p>
+          <p class="typography-body">оборот</p>
+        </div>
+
+        <div class="advantages-item">
+          <p class="typography-h2">3 000 000</p>
+          <p class="typography-body">посещаемость в год</p>
+        </div>
+
+        <div class="advantages-item">
+          <p class="typography-h2">6000 номеров</p>
+          <p class="typography-body">номерной фонд</p>
+        </div>
+      </div>
+
+    </div>
+    <hr>
+
+    <!-- Табы меню -->
+    <div class="ui-kit__block">
+      <div class="ui-kit__row">
+        <h2 class="typography-h2">Табы меню</h2>
+      </div>
+
+      <h1 class="typography-h1 title-underline tab-title"><span>О компании</span></h1>
+
+      <div class="js-tabs tab-menu">
+        <div class="tab-links tab-links-menu">
+          <a href="#tab1" class="tab-links-menu__item title-underline-hover active js-tab-link"><span>О компании</span></a>
+          <a href="#tab2" class="tab-links-menu__item title-underline-hover js-tab-link"><span>Цифры и факты</span></a>
+          <a href="#tab3" class="tab-links-menu__item title-underline-hover js-tab-link"><span>Миссия</span></a>
+          <a href="#tab4" class="tab-links-menu__item title-underline-hover js-tab-link"><span>Ценности</span></a>
+          <a href="#tab5" class="tab-links-menu__item title-underline-hover js-tab-link"><span>Устойчивое развитие</span></a>
+          <a href="#tab6" class="tab-links-menu__item title-underline-hover js-tab-link"><span>Руководство</span></a>
+        </div>     
+    
+        <div class="tab-content tab-content-menu">
+            <div id="tab1" class="tab-content__item active js-tab-content">tab1</div>
+            <div id="tab2" class="tab-content__item js-tab-content">tab2</div>
+            <div id="tab3" class="tab-content__item js-tab-content">tab3</div>
+            <div id="tab4" class="tab-content__item js-tab-content">tab4</div>
+            <div id="tab5" class="tab-content__item js-tab-content">tab5</div>
+            <div id="tab6" class="tab-content__item js-tab-content">tab6</div>
+        </div>
+      </div>
+    </div>
+    <hr>
+
+    <!-- Карта -->
+    <div class="ui-kit__block">
+      <div class="ui-kit__row">
+        <h2 class="typography-h2">Карта</h2>
+      </div>
+
+      <div id="map" class="map-ui"></div>
+    </div>
+      
+  </div>
+</div>

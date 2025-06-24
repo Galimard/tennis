@@ -1,0 +1,125 @@
+.how-to-get {
+  margin-bottom: 80px;
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 36px;
+    background: url('../images/img3.png') top right no-repeat;
+    background-size: 150px 200px;
+    padding-top: 100px;
+  }
+  
+  &__form {
+    min-width: 100%;
+    min-height: 329px;
+    padding: 30px 20px;
+    border-radius: 20px;
+    background: $cRed;
+    color: $cWhite;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .button {
+      min-width: 195px;
+      margin: 0 auto;
+    }
+
+    .form-row:not(:last-child) {
+      margin-bottom: $space-small;
+    }
+
+    .form-item__name,
+    .form-item__input {
+      font-size: 16px;
+    }
+
+    .form-message,
+    .form-message-error {
+      p {
+        font-size: 24px;
+      }
+
+      .button {
+        margin-top: $space-large;
+      }
+    }
+  }
+
+  &__img {
+    max-width: 660px;
+    width: 100%;
+    height: 312px;
+    background: url('../images/img3.png') center center no-repeat;
+    background-size: cover;
+    display: none;
+  }
+
+  @media all and (min-width: $screenSm) {
+    &__img {
+      background-size: contain;
+    }
+  }
+
+  @media all and (min-width: $screenMd) {
+    &__wrap {
+      flex-direction: row;
+      background: unset;
+    }
+
+    &__form {
+      min-width: unset;
+      width: 100%;
+    }
+
+    &__img {
+      display: block;
+    }
+
+    .typography-h4 {
+      margin-bottom: $space-large;
+    }
+  }
+
+  @media all and (min-width: $screenLg) {
+    margin-bottom: 130px;
+  }
+
+  @media all and (min-width: $screenXl) {
+    &__img {
+      height: 530px;
+      background-size: cover;
+    }
+
+    &__form {
+      padding: 50px 30px;
+
+      .form-row:not(:last-child) .form-col {
+        width: 60%;
+      }
+    }
+  }
+
+  @media all and (min-width: $screenXxl) {
+    margin-bottom: 200px;
+    
+    .typography-h4 {
+      margin-bottom: $space-xl;
+    }
+
+    &__wrap {
+      flex-direction: row;
+    }
+
+    &__form {
+      min-width: 663px;
+    }
+
+    &__img {
+      flex-shrink: 0;
+      height: 660px;
+    }
+  }
+}

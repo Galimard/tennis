@@ -1,0 +1,164 @@
+@font-face {
+  font-family: 'Akony';
+  src: url('../fonts/akony.woff') format('woff');
+  src: url('../fonts/akony.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/Inter-Light.woff') format('woff');
+  src: url('../fonts/Inter-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/Inter-Regular.woff') format('woff');
+  src: url('../fonts/Inter-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/Inter-Bold.woff') format('woff');
+  src: url('../fonts/Inter-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/Inter-Black.woff') format('woff');
+  src: url('../fonts/Inter-Black.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+}
+
+::-moz-selection {
+  color: $cBlack;
+  background: rgba($cBlack, 0.125);
+}
+
+::selection {
+  color: $cBlack;
+  background: rgba($cBlack, 0.125);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+img {
+  vertical-align: middle;
+  border-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+a:hover {
+  color: inherit;
+}
+ul {
+  @include clear-list;   
+}
+.list-ui {
+  display: grid;
+  gap: 16px;
+
+  & > li {    
+    position: relative;
+    padding-left: 36px;
+    font-family: $font;
+    font-size: 18px;   
+    font-weight: 500;
+  }
+
+  & > li::before {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 24px;
+    border-radius: 100vw;
+    background: $cRed;
+    // border: 6px solid $cRedBg;
+    position: absolute;
+    top: 2px;
+    left: 0;
+  }
+}
+
+.list-black {
+  display: grid;
+  gap: 4px;
+
+  & > li {
+    position: relative;
+    padding-left: 16px;
+    font-size: 16px;  
+    font-weight: 400; 
+    text-transform: initial;
+  }
+
+  & > li::before {
+    content: '·';
+    display: block;
+    position: absolute;
+    top: -2px;
+    left: 0;
+  }
+}
+
+html,
+body {
+  width: 100%;
+  font-size: 16px;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  line-height: $lineHeight;
+  font-family: "Inter", "Arial", sans-serif;
+  background: $cGreyBg;
+}
+
+html {
+  /* for firefox */
+  scrollbar-color: #8f8f8f #cccccc;
+  scrollbar-width: thin;
+}
+
+html::-webkit-scrollbar {
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: #cccccc;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: #8f8f8f;
+}
+
+body.no-scroll{
+  overflow: hidden !important;
+  padding-right: 16px;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6,
+p {
+  margin: 0;
+}
+
+@media all and (max-width: $screenLgMax) {
+  .list-ui {
+    gap: 16px;
+    
+    & > li {
+      font-size: 16px;
+    }
+  }
+}

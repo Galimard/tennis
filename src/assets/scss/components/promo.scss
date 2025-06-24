@@ -1,0 +1,129 @@
+.promo {
+  padding-top: 50px;
+  margin-bottom: 80px;
+
+  .typography-h1 {
+    color: $cRed;
+    position: relative;
+    z-index: 1;
+
+    & span {
+      transition: all 0.2s ease;
+      display: inline-block;
+      color: #A62430;
+    }
+
+    & span.overlap {
+      color: transparent;
+      -webkit-text-stroke: 4px #A62430;
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;  
+    padding-top: 80px;
+    gap: $space-small;  
+  }
+
+  &-img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding-right: 50px;
+
+    &__square {
+      max-width: 628px;
+      aspect-ratio: 628 / 563;
+      border-radius: $borderRadius;
+      background: $cRed;
+    }
+
+    img {
+      position: absolute;
+      bottom: 0;
+      left: 5px;
+      aspect-ratio: 893 / 893;
+      max-width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__text {
+    max-width: 422px;
+
+    p {
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 150%;
+      letter-spacing: -1px;
+      margin-bottom: $space-small;
+    }
+
+    .button {
+      margin: 0 auto;
+    }
+  }
+
+  @media all and (min-width: $screenSm) {
+    &__wrap {
+      flex-direction: row;
+    }
+
+    &-img {
+      padding-right: 55px;
+    }
+  }
+
+  @media all and (min-width: $screenMd) {
+    &-img {
+      padding-right: 80px;
+    }
+
+    &__text {
+      p {
+        font-size: 24px;
+      }
+    }
+  }
+
+  @media all and (min-width: $screenLg) {
+    margin-bottom: 130px;
+
+    &__wrap {
+      padding-top: 125px;
+    }
+
+    &-img {
+      padding-right: 165px;
+      padding-left: 40px;
+    }
+  }
+
+  @media all and (min-width: $screenXxl) {
+    padding-top: $space-xxl;
+    margin-bottom: 200px;
+
+    &__wrap {
+      padding-top: 150px;
+    }
+
+    &-img {
+      padding-right: 165px;
+      padding-left: 50px;
+
+      &__square {
+        max-width: 628px;
+      }
+    }
+
+    &__text {
+      max-width: 422px;
+
+      p {
+        font-size: 32px;
+        margin-bottom: $space-large;
+      }
+    }
+  }
+}

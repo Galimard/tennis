@@ -1,0 +1,36 @@
+.burger {
+  appearance: none;
+  border-width: 0;
+  background-color: transparent;
+  cursor: pointer;
+  height: 24px;
+  width: 24px;
+  padding: 5px 2px;
+}
+
+.burger__lines {
+  width: 100%;
+  height: 100%;
+}
+
+.burger__line {
+  height: 1px;
+  background-color: #b18e70;
+  border-radius: 10px;
+}
+
+.burger__line-big {
+  width: 20px;
+  margin-bottom: 5px;
+}
+
+.burger__line-small {
+  width: 10px;
+}
+
+@media screen and (min-width: 1240px) {
+  .burger {
+    display: none;
+  }
+}
+

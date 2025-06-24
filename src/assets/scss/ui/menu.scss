@@ -1,0 +1,63 @@
+.menu {
+  & > ul {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+
+  &__item {   
+    text-transform: lowercase; 
+    cursor: pointer;
+    padding: 8px;
+    transition: color 0.3s ease;
+
+    & a.active,
+    &:hover {
+      transition: color 0.3s ease;
+      color: $cRed;      
+    }
+  }
+
+  @media all and (max-width: $screenLgMax) {
+    display: none;
+  }
+}
+
+.burger-menu {
+  position: fixed;
+  top: 0;
+  left: 80px;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  background: $cRed;
+  padding: $space-small;
+  transform: translateX(200%);
+  transition: transform 0.5s ease;
+
+  &.open {
+    transform: translateX(0);
+  }
+
+  &__list {
+    text-align: right;
+    font-size: 12px;
+    font-weight: 700;
+    font-family: $fontAkony;
+    color: $cWhite;
+  }
+
+  &__item {
+    padding: 12px 0;
+  }
+
+  .button {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    color: $cWhite;
+    margin-left: auto;
+    margin-bottom: $space-small;
+  }
+}

@@ -1,0 +1,32 @@
+.ui-kit {
+  padding: 50px 0;
+  
+  &__block {
+    margin-bottom: 50px;
+  }
+
+  &__row {
+    margin-bottom: 30px;
+
+    & * {
+      margin-bottom: 20px;
+    }
+  } 
+}
+
+.structure {
+  ul {
+    list-style: none;
+
+    & ul {
+      padding-left: 0;
+    }
+
+    & li {
+      margin-bottom: 10px;
+      & > ul {
+        padding-left: 20px;
+      }
+    }
+  }
+}

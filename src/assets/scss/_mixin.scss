@@ -1,0 +1,98 @@
+@import "_vars";
+
+@mixin transit($prop: all, $time: $transitTime, $ease: $transitEase) {
+    transition-property: unquote($prop);
+    transition-duration: $time;
+    transition-timing-function: $ease;
+}
+
+@mixin clear-input() {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none !important;
+    resize: none;
+    box-shadow: none;
+    font-family: $font;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    -webkit-tap-highlight-color: transparent;
+
+    &:focus {
+        outline: none;
+        box-shadow: none;
+    }
+    &::-ms-reveal,
+    &::-ms-clear {
+        display: none;
+    }
+    &::-webkit-credentials-auto-fill-button {
+        visibility: hidden;
+        pointer-events: none;
+        position: absolute;
+        right: 0;
+    }
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    &[type="number"] {
+        -moz-appearance: textfield;
+    }
+
+    &:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0 1000px $cWhite inset;
+    }
+}
+
+@mixin clear-button() {
+    padding: 0;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-family: $font;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+@mixin clear-link($color: currentColor) {
+    color: $color;
+    text-decoration: none;
+    outline: none !important;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+    -webkit-tap-highlight-color: transparent;
+}
+
+@mixin clear-list() {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+@mixin hide-input() {
+    border: 0 !important;
+    clip: rect(0 0 0 0) !important;
+    -webkit-clip-path: inset(50%) !important;
+    clip-path: inset(50%) !important;
+    height: 1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+    white-space: nowrap !important;
+}
+
+@mixin flexCenter() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexSpace() {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
