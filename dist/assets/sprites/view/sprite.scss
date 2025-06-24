@@ -1,0 +1,44 @@
+%svg-common {
+    background: url("svg/sprite.view.svg") no-repeat;
+}
+
+.svg-close {
+    @extend %svg-common;
+    background-position: 65.78947368421052% 45.16%;
+}
+
+.svg-close-dims {
+    width: 24px;
+    height: 24px;
+}
+
+.svg-logo {
+    @extend %svg-common;
+    background-position: 0 0;
+}
+
+.svg-logo-dims {
+    width: 50px;
+    height: 48.51px;
+}
+
+.svg-search {
+    @extend %svg-common;
+    background-position: 87.05882352941177% 33.205882352941174%;
+}
+
+.svg-search-dims {
+    width: 15px;
+    height: 15px;
+}
+
+.svg-youtube {
+    @extend %svg-common;
+    background-position: 100% 0;
+}
+
+.svg-youtube-dims {
+    width: 50px;
+    height: 11.29px;
+}
+

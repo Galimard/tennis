@@ -13,8 +13,6 @@ document.addEventListener("DOMContentLoaded", function(){
  
     if ($menu && !$menu.contains(e.target)) {
       $menu.parentElement.classList.remove('open');
-      // $menuClose.style.display = 'none';
-      // $menuOpen.style.display = 'block';
     }
   });
 
@@ -53,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function(){
   const $menuItems = document.querySelectorAll('.js-menu-item');
 
   $menuItems.forEach(item => {
-    item.addEventListener('click', clickMenuHandler);
+    item.addEventListener('click', (item) => clickMenuHandler(item));
   })
 
   window.addEventListener('scroll', onScroll);
@@ -103,8 +101,6 @@ function menuOpen() {
   const $menuClose = document.querySelector(".js-menu-close");
   
   $menu.classList.add('open');
-  // this.style.display = 'none';
-  // $menuClose.style.display = 'flex';
 }
 
 function menuClose() {
@@ -112,6 +108,4 @@ function menuClose() {
   const $menuOpen = document.querySelector(".js-menu-open");
 
   $menu.classList.remove('open');
-  // this.style.display = 'none';
-  // $menuOpen.style.display = 'block';
 }
