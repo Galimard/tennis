@@ -53,75 +53,7 @@
     }
   }
 
-  &-search {
-    flex-shrink: 0;
-    position: relative;
-    width: 34px;
-    height: 26px;
-    margin-left: auto;
-    margin-right: 20px;
-
-    &__block {
-      position: absolute;
-      width: 200px;
-      height: 26px;
-      right: 0;
-    }
-
-    &__wrap {
-      position: relative;
-      height: 100%;
-    }
-
-    &__input {
-      @include clear-input;
-
-      position: absolute;
-      top: 50%;
-      right: 0;
-      transform: translateY(-50%);
-      width: 34px;
-      height: 26px;
-      padding: 7px 11px;
-      background: $cBlack;
-      border-radius: 20px;
-      transition: width 0.3s ease;
-      color: $cWhite;
-      font-size: 14px;
-
-      &:focus,
-      &.expanded {
-        width: 200px;
-        padding-right: 28px;
-      }
-
-      &::-webkit-search-cancel-button {
-        filter: grayscale(1);
-      }
- 
-    }
-
-    &__icon.button {
-      position: absolute;
-      top: 50%;
-      right: 10px;
-      transform: translateY(-50%);
-      width: 13px;
-      height: 13px;
-      padding: 0;
-
-      svg {
-        width: 13px;
-        height: 13px;
-      }
-    }
-  }
-
   @media all and (min-width: $screenLg) {
-    &-search {
-      margin: 0;
-    }
-
     &__burger {
       display: none !important;
     }
@@ -135,11 +67,6 @@
   }
 
   @media all and (max-width: $screenLgMax) {
-    &__search {
-      margin-left: auto;
-      margin-right: $space-xs;
-    }
-
     &__burger {
       display: flex;
     }

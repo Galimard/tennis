@@ -247,96 +247,7 @@ p {
 .header__burger .burger-line:nth-child(3) {
   bottom: 0;
 }
-.header-search {
-  flex-shrink: 0;
-  position: relative;
-  width: 34px;
-  height: 26px;
-  margin-left: auto;
-  margin-right: 20px;
-}
-.header-search__block {
-  position: absolute;
-  width: 200px;
-  height: 26px;
-  right: 0;
-}
-.header-search__wrap {
-  position: relative;
-  height: 100%;
-}
-.header-search__input {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  outline: none !important;
-  resize: none;
-  box-shadow: none;
-  font-family: "Inter", Helvetica, Arial, sans-serif, -apple-system;
-  background: none;
-  border: none;
-  padding: 0;
-  margin: 0;
-  -webkit-tap-highlight-color: transparent;
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-  width: 34px;
-  height: 26px;
-  padding: 7px 11px;
-  background: #000000;
-  border-radius: 20px;
-  transition: width 0.3s ease;
-  color: #ffffff;
-  font-size: 14px;
-}
-.header-search__input:focus {
-  outline: none;
-  box-shadow: none;
-}
-.header-search__input::-ms-reveal, .header-search__input::-ms-clear {
-  display: none;
-}
-.header-search__input::-webkit-credentials-auto-fill-button {
-  visibility: hidden;
-  pointer-events: none;
-  position: absolute;
-  right: 0;
-}
-.header-search__input::-webkit-outer-spin-button, .header-search__input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-.header-search__input[type=number] {
-  -moz-appearance: textfield;
-}
-.header-search__input:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0 1000px #ffffff inset;
-}
-.header-search__input:focus, .header-search__input.expanded {
-  width: 200px;
-  padding-right: 28px;
-}
-.header-search__input::-webkit-search-cancel-button {
-  filter: grayscale(1);
-}
-.header-search__icon.button {
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%);
-  width: 13px;
-  height: 13px;
-  padding: 0;
-}
-.header-search__icon.button svg {
-  width: 13px;
-  height: 13px;
-}
 @media all and (min-width: 1024px) {
-  .header-search {
-    margin: 0;
-  }
   .header__burger {
     display: none !important;
   }
@@ -348,10 +259,6 @@ p {
   }
 }
 @media all and (max-width: 1023px) {
-  .header__search {
-    margin-left: auto;
-    margin-right: 16px;
-  }
   .header__burger {
     display: flex;
   }

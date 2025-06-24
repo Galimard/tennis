@@ -16,37 +16,6 @@ document.addEventListener("DOMContentLoaded", function(){
     }
   });
 
-  // input search
-  const searchInput = document.querySelector('.js-search-input');
-  const searchButton = document.querySelector('.js-search-button');
-  const searchForm = document.querySelector('.js-search-form');
-
-  searchInput.addEventListener('click', function(e) {
-    if (this.clientWidth < 200) {
-      e.preventDefault();
-      this.classList.add('expanded');
-      this.focus();
-    }
-  });
-
-  document.addEventListener('click', function(e) {
-    if (!searchInput.contains(e.target) && 
-        !searchButton.contains(e.target) && 
-        searchInput.value === '') {
-      searchInput.classList.remove('expanded');
-    }
-  });
-  
-  searchForm.addEventListener('submit', function(e) {
-    if (searchInput.value.trim() === '') {
-      e.preventDefault();
-      searchInput.classList.add('expanded');
-      searchInput.focus();      
-    } else {
-      e.preventDefault();
-    }
-  });
-
   // scroll header menu
   const $menuItems = document.querySelectorAll('.js-menu-item');
 
